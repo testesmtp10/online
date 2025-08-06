@@ -596,8 +596,10 @@ L.Control.UIManager = L.Control.extend({
 					// Add to our list of items to preserve when in mobile mode
 					// FIXME: Wrap the toolbar in a class so that we don't make use
 					// global variables and functions like this
-					var idx = toolbarUpMobileItems.indexOf(insertBefore);
-					toolbarUpMobileItems.splice(idx, 0, button.id);
+					if (toolbarUpMobileItems != undefined) {
+						var idx = toolbarUpMobileItems.indexOf(insertBefore);
+						toolbarUpMobileItems.splice(idx, 0, button.id);
+					}
 				}
 			}
 			else if (this.map.isReadOnlyMode()) {
