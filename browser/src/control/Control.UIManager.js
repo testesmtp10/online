@@ -596,7 +596,7 @@ L.Control.UIManager = L.Control.extend({
 					// Add to our list of items to preserve when in mobile mode
 					// FIXME: Wrap the toolbar in a class so that we don't make use
 					// global variables and functions like this
-					if (toolbarUpMobileItems != undefined) {
+					if (typeof toolbarUpMobileItems !== 'undefined' && toolbarUpMobileItems != null) {
 						var idx = toolbarUpMobileItems.indexOf(insertBefore);
 						toolbarUpMobileItems.splice(idx, 0, button.id);
 					}
